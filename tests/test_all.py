@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-os.environ.setdefault("HUMANIZER_STYL_DIR", "/opt/data/home/Dom/01-JNX/projekty/styl-jana")
+os.environ.setdefault("HUMANIZER_STYL_DIR", str(ROOT / "examples" / "style-cards"))
 
 from humanizer import store, validator  # noqa: E402
 

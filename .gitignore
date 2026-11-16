@@ -3,3 +3,7 @@ __pycache__/
 .venv/
 .pytest_cache/
 data/
+
+# artefakty zapisu par draft -> poprawka (dane, nie kod)
+poprawki.md
+.pending.json

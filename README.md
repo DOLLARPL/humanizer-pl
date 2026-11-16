@@ -36,6 +36,7 @@ tests/test_all.py            test suite, runs without pytest
 
 ```bash
 export HUMANIZER_STYL_DIR=/path/to/style-cards   # default: the vault directory
+# the repository ships synthetic cards in examples/style-cards, the tests use them
 PYTHONPATH=src python3 -m humanizer.cli rejestry
 PYTHONPATH=src python3 -m humanizer.cli sprawdz --rejestr rejestr-klient --plik draft.txt
 PYTHONPATH=src python3 -m humanizer.server        # 127.0.0.1:8011
@@ -46,7 +47,9 @@ No dependencies. Python 3.11 or newer. The service runs as a systemd unit with `
 
 ## Scope and limits
 
-The rules are Polish-specific: inflection, honorifics and the register conventions of Polish business writing. The style cards are data, not code, so the engine works for any language once a card exists. The examples in this repository are synthetic; the real cards stay in a private vault.
+The rules are Polish-specific: inflection, honorifics and the register conventions of Polish business writing. The style cards are data, not code, so the engine works for any language once a card exists.
+
+The four cards in `examples/style-cards/` are synthetic: written for this repository, with the same structure as the real ones. The test suite runs against them, so a fresh clone needs no external data. The real cards, calibrated on 73 emails, 55 SMS messages and 1,196 Messenger conversations, stay in a private vault and are not part of this repository.
 
 ## Contact
 
